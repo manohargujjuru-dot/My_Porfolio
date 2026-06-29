@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manohar Gujjuru | Resume / CV (ATS Scored & Optimized)</title>
+    <meta name="description" content="Printable ATS-friendly resume of Manohar Gujjuru. Graduate Software Engineer specializing in MERN Full-Stack development and AI/ML solutions.">
+    <!-- Google Fonts for screen display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for the top bar links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Variables for screen design */
+        :root {
+            --bg-color: #f1f5f9;
+            --resume-bg: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --accent-color: #1e40af; /* Deep blue for corporate look */
+            --border-color: #cbd5e1;
+            --font-family: 'Inter', Arial, sans-serif;
+        }
+
+        /* Basic Resets */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        /* ATS Rules:
+           1. Use standard single-column layouts.
+           2. Use clear section headers.
+           3. Avoid tables, text boxes, images, or graphics for core data.
+           4. Use simple bullet points.
+        */
+
+        /* Top Bar utility wrapper (Hidden on printing) */
+        .top-utility-bar {
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-print {
+            background-color: var(--accent-color);
+            color: #ffffff;
+            border: none;
+            padding: 8px 16px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn-print:hover {
+            background-color: #1d4ed8;
+        }
+
+        .link-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+        }
+
+        .link-back:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        /* Printable Resume Container */
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--resume-bg);
+            padding: 40px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        /* Header Details */
+        .resume-header {
+            text-align: center;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .resume-header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .resume-header .title-sub {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .resume-contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .resume-contact span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .resume-contact a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .resume-contact a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        /* Resume Sections */
+        .resume-section {
+            margin-bottom: 25px;
+        }
+
+        .resume-section h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            border-bottom: 1px solid #94a3b8;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .resume-section p {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            text-align: justify;
+        }
+
+        /* Skills layout */
+        .skills-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .skills-row {
+            font-size: 0.95rem;
+        }
+
+        .skills-category {
+            font-weight: 700;
+            color: var(--text-primary);
+            display: inline-block;
+            width: 180px;
+        }
+
+        .skills-values {
+            color: var(--text-secondary);
+        }
+
+        /* Experience and Projects block layouts */
+        .block-item {
+            margin-bottom: 18px;
+        }
+
+        .block-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .block-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.98rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .block-title {
+            color: var(--text-primary);
+        }
+
+        .block-right {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .block-subheader {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .block-details {
+            list-style: square;
+            margin-left: 20px;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .block-details li {
+            text-align: justify;
+        }
+
+        /* Print Media styling overrides */
+        @media print {
+            body {
+                background-color: #ffffff;
+                color: #000000;
+                padding: 0;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            /* Ensure clean page breaks */
+            .resume-section {
+                page-break-inside: avoid;
+            }
+
+            h1, h2, h3 {
+                color: #000000 !important;
+            }
+
+            .resume-header {
+                border-color: #000000 !important;
+            }
+
+            .block-right {
+                color: #000000 !important;
+            }
+        }
+
+        /* Responsive Screen sizes */
+        @media (max-width: 600px) {
+            .resume-container {
+                padding: 20px 15px;
+            }
+            .resume-header h1 {
+                font-size: 1.7rem;
+            }
+            .resume-contact {
+                flex-direction: column;
+                gap: 5px;
+                align-items: center;
+            }
+            .block-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+            .block-subheader {
+                flex-direction: column;
+                gap: 2px;
+            }
+            .skills-category {
+                width: 100%;
+                margin-bottom: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Utility top bar (Hidden on prints) -->
+    <div class="top-utility-bar no-print">
+        <a href="index.html" class="link-back">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+        </a>
+        <button onclick="window.print()" class="btn-print">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Print to PDF / Save</span>
+        </button>
+    </div>
+
+    <!-- Printable ATS Resume -->
+    <div class="resume-container">
+        
+        <!-- Header -->
+        <header class="resume-header">
+            <h1>Manohar Gujjuru</h1>
+            <div class="title-sub">Graduate Software Engineer | Full-Stack MERN & AI/ML Specialist</div>
+            
+            <div class="resume-contact">
+                <span><i class="fa-solid fa-location-dot no-print"></i> Vizianagaram, Andhra Pradesh</span>
+                <span><i class="fa-solid fa-phone no-print"></i> +91 82835717</span>
+                <span><i class="fa-solid fa-envelope no-print"></i> <a href="mailto:manoharmanugujjuru@gmail.com">manoharmanugujjuru@gmail.com</a></span>
+                <br class="no-print">
+                <span><i class="fa-brands fa-linkedin no-print"></i> <a href="https://linkedin.com/in/gujjuru-manohar3123" target="_blank">linkedin.com/in/gujjuru-manohar3123</a></span>
+                <span><i class="fa-brands fa-github no-print"></i> <a href="https://github.com/manohargujjuru-dot" target="_blank">github.com/manohargujjuru-dot</a></span>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="resume-section">
+            <h2>Professional Summary</h2>
+            <p>
+                Detail-oriented Computer Science Engineering graduate specializing in Artificial Intelligence and Machine Learning (AI & ML) with hands-on internship experience in Full-Stack MERN development, Java, and AI applications. Proficient in building robust, scalable, and responsive web applications with interactive front-end designs and secure backend APIs. Possesses a strong foundation in algorithmic problem-solving, structured databases, and developer tools, seeking an entry-level Software Engineer role to contribute to organization growth.
+            </p>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="resume-section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skills-row">
+                    <span class="skills-category">Programming Languages:</span>
+                    <span class="skills-values">Java, JavaScript (ES6+), Python, C</span>
+                </div>
+                <div class="skills-row">
+                    <span class="skills-category">Web Technologies:</span>
+                    <span class="skills-values">HTML5, CSS3, React.js, Tailwind CSS, Responsive Web Design</span>
+                </div>
+                <div class="skills-row">
+                    <span class="skills-category">Backend & APIs:</span>
+                    <span class="skills-values">Node.js, Express.js, RESTful APIs, JSON Web Tokens (JWT), Bcrypt</span>
+                </div>
+                <div class="skills-row">
+                    <span class="skills-category">Databases:</span>
+                    <span class="skills-values">MySQL, MongoDB, Database Indexing, Query Optimization</span>
+                </div>
+                <div class="skills-row">
+                    <span class="skills-category">Tools & Platforms:</span>
+                    <span class="skills-values">Git, GitHub, VS Code, Postman API client, Chrome DevTools</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="resume-section">
+            <h2>Internship Experience</h2>
+            
+            <!-- Job 1 -->
+            <div class="block-item">
+                <div class="block-header">
+                    <span class="block-title">Hippocloud Technologies</span>
+                    <span class="block-right">Vizianagaram, AP</span>
+                </div>
+                <div class="block-subheader">
+                    <span>Full-Stack Developer Intern</span>
+                    <span>Recent</span>
+                </div>
+                <ul class="block-details">
+                    <li>Engineered a scalable Fleet Management System utilizing the MERN stack (MongoDB, Express.js, React.js, Node.js) to monitor and manage corporate transit operations.</li>
+                    <li>Designed and integrated secure RESTful APIs to handle complete CRUD operations for vehicle logging, driver registration, and real-time maintenance updates.</li>
+                    <li>Developed a dynamic admin dashboard in React.js featuring interactive visual analytics to monitor fuel efficiency, trip history, and driver performance logs.</li>
+                    <li>Optimized database queries in MongoDB using precise indexing, reducing document retrieval times for real-time asset tracking logs.</li>
+                </ul>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="block-item">
+                <div class="block-header">
+                    <span class="block-title">Web Development Internship Program</span>
+                    <span class="block-right">Remote</span>
+                </div>
+                <div class="block-subheader">
+                    <span>Web Development Intern</span>
+                    <span>Previous</span>
+                </div>
+                <ul class="block-details">
+                    <li>Developed clean, highly responsive web pages using HTML, CSS, and JavaScript following modern UI/UX design standards.</li>
+                    <li>Built modular and reusable front-end components using React.js architecture to establish robust client-side rendering.</li>
+                    <li>Implemented state management and responsive event handling patterns across functional web modules.</li>
+                    <li>Utilized Git and GitHub for structural version control, seamless pull requests, and collaborative code integration.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="resume-section">
+            <h2>Projects</h2>
+            
+            <!-- Project 1 -->
+            <div class="block-item">
+                <div class="block-header">
+                    <span class="block-title">Hippofleet - Fleet Management System</span>
+                    <span class="block-right">MERN Stack Enterprise Application</span>
+                </div>
+                <div class="block-subheader">
+                    <span>Developer (Hippocloud Tech Project)</span>
+                    <span>Recent</span>
+                </div>
+                <ul class="block-details">
+                    <li>Developed an end-to-end web platform to optimize operational workflows, live asset assignment, and scheduling for commercial fleets.</li>
+                    <li>Implemented robust User Authentication and Authorization using JSON Web Tokens (JWT) and bcrypt, securing distinct access tiers for Admins, Drivers, and Fleet Managers.</li>
+                    <li>Built automated scheduling and notification features that trigger real-time alerts for vehicle servicing deadlines and registration renewals.</li>
+                    <li>Leveraged Postman for comprehensive endpoint performance testing and API reliability checks.</li>
+                </ul>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="block-item">
+                <div class="block-header">
+                    <span class="block-title">SignSense - AI Hand Gesture-Based Language Interpreter</span>
+                    <span class="block-right">Academic Capstone Project</span>
+                </div>
+                <div class="block-subheader">
+                    <span>AI & Full-Stack Developer</span>
+                    <span>2025</span>
+                </div>
+                <ul class="block-details">
+                    <li>Developed a full-stack web application that converts real-time hand gestures into readable text and fluent speech for hearing-impaired users.</li>
+                    <li>Implemented dynamic gesture recognition using advanced AI computer vision models and OpenCV with live webcam feed capture.</li>
+                    <li>Designed a clean, highly accessible user interface using HTML, CSS, JavaScript, and Tailwind CSS.</li>
+                    <li>Built scalable backend services using Node.js and Express.js, integrating secured user authentication and mapping rules with a MySQL database.</li>
+                </ul>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="block-item">
+                <div class="block-header">
+                    <span class="block-title">WedLink - Matrimonial & Wedding Planner</span>
+                    <span class="block-right">Full-Stack Matchmaking & Planner</span>
+                </div>
+                <div class="block-subheader">
+                    <span>Full-Stack Developer</span>
+                    <span>2026</span>
+                </div>
+                <ul class="block-details">
+                    <li>Engineered an elegant matrimonial discovery dashboard enabling personalized matching profile filters.</li>
+                    <li>Integrated real-time RSVP notification services and visual layouts managing guest seating arrangements.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="resume-section">
+            <h2>Education</h2>
+            
+            <!-- School 1 -->
+            <div class="block-item">
+                <div class="block-header">
+                    <span class="block-title">Avanthi Institute of Engineering and Technology</span>
+                    <span class="block-right">2021 – 2025</span>
+                </div>
+                <div class="block-subheader">
+                    <span>Bachelor of Technology in Computer Science Engineering (AI & ML)</span>
+                    <span>CGPA: 7.2 / 10</span>
+                </div>
+            </div>
+
+            <!-- School 2 -->
+            <div class="block-item">
+                <div class="block-header">
+                    <span class="block-title">Srinivasa Junior College</span>
+                    <span class="block-right">2019 – 2021</span>
+                </div>
+                <div class="block-subheader">
+                    <span>Intermediate (12th Grade) - MPC Stream</span>
+                    <span>CGPA: 7.8 / 10</span>
+                </div>
+            </div>
+
+            <!-- School 3 -->
+            <div class="block-item">
+                <div class="block-header">
+                    <span class="block-title">Pallavi Vidhya Mandhir EM School</span>
+                    <span class="block-right">2019</span>
+                </div>
+                <div class="block-subheader">
+                    <span>Secondary School (10th Grade)</span>
+                    <span>CGPA: 9.3 / 10</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Achievements -->
+        <section class="resume-section">
+            <h2>Certifications & Achievements</h2>
+            <ul class="block-details">
+                <li><strong>AWS Academy Cloud Foundations</strong> – AWS Academy Graduate Certificate</li>
+                <li><strong>Introduction to Artificial Intelligence & Machine Learning</strong> – AICTE Certified</li>
+                <li><strong>Zscaler Zero Trust Cloud Security Virtual Internship</strong> – AICTE Certified</li>
+                <li>Participated in <strong>WEBBLAZE</strong> Two-day Web Development Workshop at JNTU-GV Vizianagaram</li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+</html>

@@ -148,6 +148,7 @@ ul {
 section {
     padding: 8rem 0;
     position: relative;
+    overflow: hidden; /* Prevent background shapes, badges, or elements from overflowing horizontally */
 }
 
 /* --- Glassmorphism Base Cards --- */
@@ -1735,18 +1736,19 @@ footer {
     }
     
     .visual-wrapper {
-        width: 260px;
-        height: 260px;
+        width: 220px;
+        height: 220px;
+        margin: 0 auto;
     }
     
     .floating-badge {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.75rem;
+        padding: 0.35rem 0.7rem;
+        font-size: 0.7rem;
     }
     
-    .badge-1 { left: -10px; }
-    .badge-2 { right: -15px; }
-    .badge-3 { left: -20px; }
+    .badge-1 { left: -5px; }
+    .badge-2 { right: -5px; }
+    .badge-3 { left: -10px; }
     
     .section-header .title {
         font-size: 2rem;

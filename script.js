@@ -363,24 +363,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = `<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>`;
                 
-                // Simulate server latency
-                setTimeout(() => {
+                // Send AJAX request to FormSubmit.co
+                fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalBtnHtml;
 
-                    // Show success status feedback message
-                    formFeedback.textContent = "Thank you! Your message has been sent successfully. Manohar will contact you shortly.";
-                    formFeedback.className = "form-feedback success";
-                    
-                    // Reset form fields
-                    contactForm.reset();
+                    if (response.ok) {
+                        formFeedback.textContent = "Thank you! Your message has been sent successfully. I will get back to you shortly.";
+                        formFeedback.className = "form-feedback success";
+                        contactForm.reset();
+                    } else {
+                        throw new Error("Form submission failed");
+                    }
 
                     // Clear feedback status after 6 seconds
                     setTimeout(() => {
                         formFeedback.className = "form-feedback";
                         formFeedback.textContent = "";
                     }, 6000);
-                }, 1500);
+                })
+                .catch(error => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnHtml;
+                    formFeedback.textContent = "Oops! Something went wrong while sending your message. Please try again later.";
+                    formFeedback.className = "form-feedback error";
+                    
+                    setTimeout(() => {
+                        formFeedback.className = "form-feedback";
+                        formFeedback.textContent = "";
+                    }, 6000);
+                });
             }
         });
 

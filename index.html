@@ -557,26 +557,30 @@
                     
                     <div class="contact-form-container glass-card">
                         <h3>Send a Message</h3>
-                        <form id="contact-form" novalidate>
+                        <form id="contact-form" action="https://formsubmit.co/manoharmanugujjuru@gmail.com" method="POST" novalidate>
+                            <!-- FormSubmit Configurations -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_subject" value="New Portfolio Message from Manohar's Site!">
+                            
                             <div class="form-row">
                                 <div class="input-group">
-                                    <input type="text" id="name" required placeholder=" ">
+                                    <input type="text" id="name" name="name" required placeholder=" ">
                                     <label for="name">Your Name</label>
                                     <span class="error-msg">Name is required</span>
                                 </div>
                                 <div class="input-group">
-                                    <input type="email" id="email" required placeholder=" ">
+                                    <input type="email" id="email" name="email" required placeholder=" ">
                                     <label for="email">Your Email</label>
                                     <span class="error-msg">Enter a valid email address</span>
                                 </div>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="subject" required placeholder=" ">
+                                <input type="text" id="subject" name="subject" required placeholder=" ">
                                 <label for="subject">Subject</label>
                                 <span class="error-msg">Subject is required</span>
                             </div>
                             <div class="input-group">
-                                <textarea id="message" required rows="5" placeholder=" "></textarea>
+                                <textarea id="message" name="message" required rows="5" placeholder=" "></textarea>
                                 <label for="message">Your Message</label>
                                 <span class="error-msg">Message cannot be empty</span>
                             </div>

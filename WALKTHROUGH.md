@@ -8,7 +8,7 @@ Here is a summary of the work completed:
 
 The following files have been created in your workspace:
 1. [index.html](file:///e:/portfoilo/index.html) — Structured, fully semantic, and SEO-friendly layout.
-2. [resume.html](file:///e:/portfoilo/resume.html) — ATS-friendly, printable, single-column resume optimized to fit tightly on a single page when printing or saving as a PDF.
+2. [resume.html](file:///e:/portfoilo/resume.html) — ATS-friendly, printable, single-column resume optimized to fit tightly on a single page when printing or saving as a PDF, and fully responsive on mobile.
 3. [styles.css](file:///e:/portfoilo/styles.css) — Custom stylesheet featuring CSS variable systems for Light/Dark modes, glassmorphism UI widgets, animations, timelines, and layouts.
 4. [script.js](file:///e:/portfoilo/script.js) — Interface interactivity, including a typing animation, portfolio filter buttons, scroll progress tracking, form input validators, and dynamic project modals.
 5. [assets/](file:///e:/portfoilo/assets) — Contains high-quality dashboard and interface mocks for **Hippofleet**.
@@ -36,6 +36,7 @@ Here is the custom visual dashboard preview generated and integrated into your p
 * **Rich Modals System**: Open a modal on click for detailed summaries, architectures, and features of each project.
 * **Interactive Form Validation**: Dynamic error clearing and mock success animations for sending contact messages.
 * **Single-Page Printable Resume**: Programmed custom `@media print` rules specifying a compact `0.35in` page margin and clean `11px` line height to ensure the resume print preview renders perfectly on a single sheet of paper without split pages or trailing gaps.
+* **Mobile Layout Optimization**: Redesigned elements under `600px` using flexible flex-wrap containers to prevent text overflow, formatted contact details as an inline wrapping row instead of a vertical stack, styled locations as badges, and stacked skill groups to look beautiful and fit comfortably on smaller phone viewports.
 
 ---
 

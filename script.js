@@ -197,21 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             architecture: "Built on the MERN stack with client modules decoupled from Express.js endpoints. Secure routing guards client screens, and schema-validation secures database CRUD models on the backend."
         },
-        wedlink: {
-            title: "WedLink Matrimonial & Wedding Planner",
-            category: "Responsive Matrimonial Portal",
-            tags: ["React.js", "Tailwind CSS", "MySQL", "Node.js", "Framer Motion"],
-            image: "assets/wedlink_preview.png",
-            github: "https://github.com/manohargujjuru-dot",
-            description: "WedLink is an elegant and highly interactive web application mapping wedding coordinates and guest plans. It functions as both a matrimonial discovery portal and a dynamic client utility planner for coordinates, invitations, and wedding check-offs.",
-            features: [
-                "Matrimonial matching algorithms filters linking profiles based on shared preferences.",
-                "Interactive seating chart manager rendering visual configurations of guest arrangements.",
-                "Digital invitations engine with real-time RSVP notification handlers.",
-                "Responsive dashboard detailing budget breakdowns, calendar checkpoints, and coordinator checklists."
-            ],
-            architecture: "Crafted with React.js using Tailwind CSS for fine styling details, backed by an Express/Node api and MySQL tables mapping guest RSVP structures."
-        },
+
         restaurant: {
             title: "BiteCraft Gourmet Restaurant",
             category: "Front-end Food Catalog & Booking Website",

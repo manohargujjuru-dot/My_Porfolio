@@ -248,10 +248,17 @@
 
         /* Print Media styling overrides */
         @media print {
+            @page {
+                size: letter;
+                margin: 0.35in 0.45in;
+            }
+
             body {
                 background-color: #ffffff;
                 color: #000000;
                 padding: 0;
+                font-size: 11px !important;
+                line-height: 1.35 !important;
             }
 
             .no-print {
@@ -261,24 +268,108 @@
             .resume-container {
                 box-shadow: none;
                 border: none;
-                padding: 0;
-                max-width: 100%;
-            }
-
-            /* Ensure clean page breaks */
-            .resume-section {
-                page-break-inside: avoid;
-            }
-
-            h1, h2, h3 {
-                color: #000000 !important;
+                padding: 0 !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                background: #ffffff !important;
             }
 
             .resume-header {
+                padding-bottom: 8px !important;
+                margin-bottom: 12px !important;
                 border-color: #000000 !important;
             }
 
+            .resume-header h1 {
+                font-size: 1.8rem !important;
+                margin-bottom: 2px !important;
+                color: #000000 !important;
+            }
+
+            .resume-header .title-sub {
+                font-size: 0.95rem !important;
+                margin-bottom: 6px !important;
+                color: #000000 !important;
+            }
+
+            .resume-contact {
+                gap: 12px !important;
+                font-size: 0.78rem !important;
+                color: #000000 !important;
+            }
+
+            .resume-contact a {
+                color: #000000 !important;
+            }
+
+            .resume-section {
+                margin-bottom: 14px !important;
+                page-break-inside: avoid;
+            }
+
+            .resume-section h2 {
+                font-size: 1.05rem !important;
+                color: #000000 !important;
+                border-bottom: 1.5px solid #000000 !important;
+                padding-bottom: 2px !important;
+                margin-bottom: 8px !important;
+            }
+
+            .resume-section p {
+                font-size: 0.85rem !important;
+                text-align: justify !important;
+                color: #000000 !important;
+            }
+
+            .skills-grid {
+                gap: 4px !important;
+            }
+
+            .skills-row {
+                font-size: 0.82rem !important;
+            }
+
+            .skills-category {
+                width: 160px !important;
+                color: #000000 !important;
+            }
+
+            .skills-values {
+                color: #000000 !important;
+            }
+
+            .block-item {
+                margin-bottom: 8px !important;
+                page-break-inside: avoid;
+            }
+
+            .block-header {
+                font-size: 0.88rem !important;
+                margin-bottom: 1px !important;
+            }
+
+            .block-title {
+                color: #000000 !important;
+            }
+
             .block-right {
+                color: #000000 !important;
+            }
+
+            .block-subheader {
+                font-size: 0.78rem !important;
+                margin-bottom: 3px !important;
+                color: #000000 !important;
+            }
+
+            .block-details {
+                margin-left: 15px !important;
+                font-size: 0.82rem !important;
+                gap: 2px !important;
+                color: #000000 !important;
+            }
+
+            .block-details li {
                 color: #000000 !important;
             }
         }
@@ -459,21 +550,7 @@
                 </ul>
             </div>
 
-            <!-- Project 3 -->
-            <div class="block-item">
-                <div class="block-header">
-                    <span class="block-title">WedLink - Matrimonial & Wedding Planner</span>
-                    <span class="block-right">Full-Stack Matchmaking & Planner</span>
-                </div>
-                <div class="block-subheader">
-                    <span>Full-Stack Developer</span>
-                    <span>2026</span>
-                </div>
-                <ul class="block-details">
-                    <li>Engineered an elegant matrimonial discovery dashboard enabling personalized matching profile filters.</li>
-                    <li>Integrated real-time RSVP notification services and visual layouts managing guest seating arrangements.</li>
-                </ul>
-            </div>
+
         </section>
 
         <!-- Education -->

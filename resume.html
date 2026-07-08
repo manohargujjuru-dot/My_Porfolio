@@ -143,13 +143,14 @@
             gap: 5px;
         }
 
-        .resume-contact a {
-            color: var(--text-secondary);
-            text-decoration: none;
+        .resume-container a {
+            color: #2563eb;
+            text-decoration: underline;
+            transition: color 0.2s ease-in-out;
         }
 
-        .resume-contact a:hover {
-            color: var(--accent-color);
+        .resume-container a:hover {
+            color: #1d4ed8;
             text-decoration: underline;
         }
 
@@ -298,8 +299,9 @@
                 color: #000000 !important;
             }
 
-            .resume-contact a {
-                color: #000000 !important;
+            .resume-container a {
+                color: #1e40af !important;
+                text-decoration: underline !important;
             }
 
             .resume-section {
@@ -621,7 +623,7 @@
                     <span class="block-right">Recent</span>
                 </div>
                 <div class="block-subheader">
-                    <span>Developer (Hippocloud Tech Project) | MERN Stack Enterprise Application | Live: <a href="https://hippofleet.vercel.app/" target="_blank">hippofleet.vercel.app</a></span>
+                    <span>Developer (Hippocloud Tech Project) | MERN Stack Enterprise Application | <a href="https://hippofleet.vercel.app/" target="_blank" style="font-weight: 700;">[Click to View Project]</a></span>
                 </div>
                 <ul class="block-details">
                     <li>Developed an end-to-end web platform to optimize operational workflows, live asset assignment, and scheduling for commercial fleets.</li>

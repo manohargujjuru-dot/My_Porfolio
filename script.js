@@ -188,6 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tags: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Axios", "Git"],
             image: "assets/hippofleet_preview.png",
             github: "https://github.com/manohargujjuru-dot",
+            live: "https://hippofleet.vercel.app/",
             description: "Developed during my Full-Stack Internship at Hippocloud Technologies, Hippofleet is an enterprise-scale fleet management web application. The platform coordinates vehicle operations, registers operators, schedules maintenance checks, and displays active transit logistics.",
             features: [
                 "Role-based authentication system with distinct levels for Administrators, Dispatchers, and Drivers utilizing JSON Web Tokens (JWT).",
@@ -254,6 +255,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const tagsHtml = data.tags.map(tag => `<span>${tag}</span>`).join('');
         const featuresHtml = data.features.map(feat => `<li><i class="fa-solid fa-circle-check"></i> <span>${feat}</span></li>`).join('');
 
+        let linksHtml = '';
+        if (data.live) {
+            linksHtml += `
+                <a href="${data.live}" target="_blank" class="btn btn-primary btn-small">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <span>Live Demo</span>
+                </a>
+            `;
+        }
+        linksHtml += `
+            <a href="${data.github}" target="_blank" class="btn ${data.live ? 'btn-secondary' : 'btn-primary'} btn-small">
+                <i class="fa-brands fa-github"></i>
+                <span>View Source</span>
+            </a>
+        `;
+
         modalContent.innerHTML = `
             ${visualHtml}
             <div class="modal-project-header">
@@ -261,11 +278,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h2>${data.title}</h2>
                     <span class="project-category" style="position: static; display: inline-block; margin-top: 0.5rem;">${data.category}</span>
                 </div>
-                <div class="modal-project-links">
-                    <a href="${data.github}" target="_blank" class="btn btn-primary btn-small">
-                        <i class="fa-brands fa-github"></i>
-                        <span>View Source</span>
-                    </a>
+                <div class="modal-project-links" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    ${linksHtml}
                 </div>
             </div>
             

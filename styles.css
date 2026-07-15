@@ -1091,6 +1091,10 @@ section {
     background: linear-gradient(135deg, #111e1f 0%, #0d463e 100%);
 }
 
+.spendwise-fallback-bg {
+    background: linear-gradient(135deg, #181124 0%, #3e1b75 100%);
+}
+
 .fallback-glow {
     position: absolute;
     width: 80px;

@@ -232,6 +232,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 "MySQL structures housing authentication data, preferences settings, and user telemetry histories."
             ],
             architecture: "Hybrid model using Python scripts for high-frequency computer vision processing, communicates outputs to a standard Node.js server via local socket bridges and logs data in MySQL."
+        },
+        spendwise: {
+            title: "SpendWise AI Voice Tracker",
+            category: "AI-Powered Voice Expense Tracker",
+            tags: ["React.js", "Google Gemini Flash", "Web Speech API", "LocalStorage", "SVG Visualizer"],
+            image: null,
+            fallbackClass: "spendwise-fallback-bg",
+            fallbackIcon: "fa-solid fa-wallet",
+            github: "https://github.com/Manohar-777/SpendWise-React",
+            live: "https://spend-wise-lime-chi.vercel.app/",
+            description: "SpendWise is an innovative personal finance tracking application that offers hands-free logging using advanced AI and speech processing. Users can add expenses in English, Telugu, or a mixture of both languages via speech. The app processes voice commands, extracts structured transaction parameters, and logs them locally.",
+            features: [
+                "Multilingual voice transcription and intent parsing utilizing browser Web Speech API.",
+                "Real-time entity extraction (amount, category, date, description) via Google Gemini 2.5 Flash API.",
+                "Custom visual Voice Orb showing assistant states: Listening, Thinking, Speaking, and Idle.",
+                "Responsive SVG donut charts for visual categorization of expenses and spending trends.",
+                "Local-first privacy architecture storing transaction logs and credentials inside browser LocalStorage."
+            ],
+            architecture: "Built as a modular single-page React.js client. It integrates with Gemini Flash via serverless client-side API requests, employing local state management to guarantee absolute data privacy."
         }
     };
 

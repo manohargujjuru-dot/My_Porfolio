@@ -234,8 +234,8 @@ document.addEventListener('DOMContentLoaded', () => {
             architecture: "Hybrid model using Python scripts for high-frequency computer vision processing, communicates outputs to a standard Node.js server via local socket bridges and logs data in MySQL."
         },
         spendwise: {
-            title: "SpendWise AI Voice Tracker",
-            category: "AI-Powered Voice Expense Tracker",
+            title: "SpendWise Realtime Expense Tracker",
+            category: "Realtime Expense Tracker",
             tags: ["React.js", "Google Gemini Flash", "Web Speech API", "LocalStorage", "SVG Visualizer"],
             image: null,
             fallbackClass: "spendwise-fallback-bg",

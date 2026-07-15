@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
             image: null,
             fallbackClass: "spendwise-fallback-bg",
             fallbackIcon: "fa-solid fa-wallet",
-            github: "https://github.com/manohargujjuru-dot",
+            github: "https://github.com/manohargujjuru-dot/spend-wise",
             live: "https://spend-wise-lime-chi.vercel.app/",
             description: "SpendWise is an innovative personal finance tracking application that offers hands-free logging using advanced AI and speech processing. Users can add expenses in English, Telugu, or a mixture of both languages via speech. The app processes voice commands, extracts structured transaction parameters, and logs them locally.",
             features: [
